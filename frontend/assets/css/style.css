@@ -8,7 +8,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: red;
+  background: #f80202 !important;
   font-family: 'Poppins', sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
