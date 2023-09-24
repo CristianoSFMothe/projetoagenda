@@ -1,37 +1,58 @@
-<%- include('includes/head') %> 
-<%- include('includes/nav') %>
+<%- include('includes/head') %>
+  <%- include('includes/nav') %>
 
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-2"></div>
-      <div class="col-lg-8 my-3">
-        <h1 class="text-center title-page"><strong>Login</strong></h1>
+    <main>
+      <div class="row justify-content-center">
+        <div class="col-lg-8 my-3">
+          <h1 class="text-center title-page">Agenda Online</h1>
+          <p class="text-center lead">Faça login ou criei sua conta</p>
 
-        <div class="col-lg wrapper">
-          <p class="text-center">Faça o login para visualizar seus contatos</p>
-          <form action="/">
-            <div class="form-group">
-              <label>Seu email</label>
-              <input type="email" class="form-control" name="email" placeholder="Informe seu e-mail" autocomplete="off">
+          <div class="login-form">
+            <div class="row">
+              <!-- Seção de criar conta -->
+              <div class="col-lg">
+                <h4>Faça seu cadastro</h4>
+                <p>Se você ainda não tem conta, cadastre-se</p>
+                <form action="/login/register" method="POST">
+                  <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Informe seu email">
+                  </div>
+                  <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" class="form-control" name="password" placeholder="Informe sua senha">
+                  </div>
+                  <button type="submit" name="submit" class="btn btn-primary">Criar conta</button>
+                </form>
+  
+              </div>            
+  
+  
+              <!-- Seção de login -->
+  
+              <div class="col-lg">
+                <h4>Faça seu login</h4>
+                <p>Se você já tem uma conta faça seu login</p>
+                <form action="/login/login" method="POST">
+                  <input type="hidden" name="_csrf" value=<%= csrfToken %>>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Informe seu email">
+                  </div>
+                  <div class="form-group">
+                    <label>Senha</label>
+                    <input type="password" class="form-control" name="password" placeholder="Informe sua senha">
+                  </div>
+                  <button type="submit" name="submit" class="btn btn-primary">Entrar</button>
+                </form>
+              </div>
+  
             </div>
-            <div class="form-group">
-              <label>Senha</label>
-              <input type="password" class="form-control" name="password" placeholder="Informe sua senha" autocomplete="off">
-            </div>
-            <center>
-              <button class="btn btn-primary p-3" type="submit">Cadastrar</button>
-            </center>
-            <p class="submit">
-              <small>Não tem cadastro? </small>
-              <a href="signup.ejs">Crie sua conta</a>
-            </p>
-          </form>
+
+          </div>
         </div>
       </div>
-      <div class="col-lg-2"></div>
-    </div>
-  </div>
-</section>
+    </main>
 
-<%- include('includes/footer') %>
+    <%- include('includes/footer') %>

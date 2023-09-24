@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100&display=swap');
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+body {  
+  background-color: #222;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: white;
+}
+
+p {
+  font-size: 0.9;
+  color: #FFF;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 0px;
+  margin-left: -15px;
+}
+.login-form {
+  border: 1px solid #fff;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+main .title-page {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.login-form h4 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: white;
+}
+
+.login-form p {
+  font-size: 0.9em;
+  color: white;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  color: white;
+}
+
+
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form .form-control {
+  background-color: #333;
+}
+
+.login-form .btn {
+  width: 100%; 
+  background-color: #007BFF; 
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+.login-form input[type="submit"],
+.login-form button {
+  margin-top: 25px; 
+}
+
+.login-form button {
+  background-color: #007BFF;
+  color: white;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+
+.login-form button:hover {
+  background-color: #0056b3;
+  color: #fff; 
+}
+
+label {
+  color: #fff;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.col-lg:first-child {
+  border-right: 1px solid #ccc; 
+  padding-right: 15px; 
+}
+
+.col-lg:last-child {
+  margin-left: 15px; 
+}
