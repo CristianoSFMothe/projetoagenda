@@ -13,6 +13,9 @@
               <div class="col-lg">
                 <h4>Faça seu cadastro</h4>
                 <p>Se você ainda não tem conta, cadastre-se</p>
+
+                <%- include('includes/messages'); %>
+
                 <form action="/login/register" method="POST">
                   <input type="hidden" name="_csrf" value=<%= csrfToken %>>
                   <div class="form-group">
@@ -23,12 +26,11 @@
                     <label>Senha</label>
                     <input type="password" class="form-control" name="password" placeholder="Informe sua senha">
                   </div>
-                  <button type="submit" name="submit" class="btn btn-primary">Criar conta</button>
+                  <button type="submit" class="btn btn-primary">Criar conta</button>
                 </form>
   
-              </div>            
-  
-  
+              </div>       
+    
               <!-- Seção de login -->
   
               <div class="col-lg">
@@ -44,7 +46,7 @@
                     <label>Senha</label>
                     <input type="password" class="form-control" name="password" placeholder="Informe sua senha">
                   </div>
-                  <button type="submit" name="submit" class="btn btn-primary">Entrar</button>
+                  <button type="submit" class="btn btn-primary">Entrar</button>
                 </form>
               </div>
   
